@@ -1,0 +1,50 @@
+do_read
+Syntax: read [filename.extension]
+            read the file and convert to dictionary format
+        :param filename:
+        :return: Contents of the file
+
+do_validate
+Syntax: validate [flag]
+            validate: will validate the previously read file
+            validate -f: will ask which file to read and validate
+            validate -v: will show which data was valid
+            validate -fv: will ask which file to read and
+                          validate and will show which data was valid
+        :param flag: -f, -v, -fv
+        :return: Each file and whether it was valid or not
+
+do_db
+Syntax: db [flag]
+            db: displays all data from the database
+            db -i: inserts the previously validated data
+            db -if: asks which file you would like to input to the database,
+                    reads it, validates, then inserts
+            db -v: asks which column you would like to see from the table
+            db -d: drop table
+            db -c: create table
+            db -dc: drop and create table
+        :param flag: -i, -if, -v, -d, -c, -dc
+        :return: Database knowledge
+
+do_chart
+Syntax: chart [flag]
+            chart: asks which column from the table you want to
+                    display in a barchart (age, sales, salary)
+            chart -d: asks which two columns you want to compare
+                        in a barchart (age, sales, salary)
+        :param flag: -d
+        :return: Opens web browser to display barchart
+
+do_serial
+Syntax: serial [flag]
+            serial: writes the contents of the recently read file to [yourfilename].pickle
+                    you will be prompted for the name of the pickle file
+            serial -r: reads the contents of 'data.pickle'
+        :param flag: -r
+        :return: contents of 'data.pickle'
+
+do_quit
+Syntax: quit
+            quit from my CMD
+        :return: True
